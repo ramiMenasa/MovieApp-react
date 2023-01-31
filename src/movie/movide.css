@@ -1,0 +1,24 @@
+.ho{
+    padding: 50px ;
+    position: absolute;
+    width: 100%;
+    height: 92%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(0deg, #000000 0%, #000000f1 55%, #000000db 68%, #00000060 100%);
+    
+}
+body{
+    background-image:black;
+}
+.details{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    background-color: #000000;
+    z-index: -1;
+}
+ 

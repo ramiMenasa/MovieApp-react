@@ -5,9 +5,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/src/backGroundjpg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; 
+
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.cardImg{
+  position: relative;
+  text-align:left;
+
+}
+.textOnImg{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+
+}
+
+.heartOnImg{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+
 }
