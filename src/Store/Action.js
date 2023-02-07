@@ -6,12 +6,13 @@ export const Add_Favorite = (payload)=>{
     type:"ADD_FAVORITE",
     payload
 }
+
 }
 
 export const Remove_Favorite = (payload)=>{
 
     return {
-    type:"Remove_FAVORITE",
+    type:"REMOVE_FAVORITE",
     payload
 }
 }

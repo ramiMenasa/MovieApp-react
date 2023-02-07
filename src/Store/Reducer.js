@@ -1,7 +1,7 @@
 const InitialValues = {
     counter: 0,
     favorits: [],
-    list: []
+    list: [],
 }
 export default function FavoriteRed(state = InitialValues, action) {
     switch (action.type) {

@@ -13,48 +13,49 @@ function MoviesList() {
     let clickedMovies = [];
     const dispatch = useDispatch()
 
-    // useEffect(() => {
-//         dispatch(getMovies())
-//               clickedMovies = listSearch;
-//             //   console.log(listPage);
-//               clickedMovies.map(element => {
-//                   {
-//                       element.isClicked=false;
-                      
-//                       fav.forEach(fav => {
-//                           if (fav.id==element.id) {
-//                               element.isClicked=true
-//                           }
-                          
-//                       });
-
-//                   }
-
-//               })
-//               setMoviesData(clickedMovies)
-//   }, [])
-
 
     useEffect(() => {
-          dispatch(getMoviesPage(numberOfPage))
-                clickedMovies = listSearch;
-                console.log(numberOfPage);
-                console.log(listSearch);
-                clickedMovies.map(element => {
-                    {
-                        element.isClicked=false;
-                        
-                        fav.forEach(fav => {
-                            if (fav.id==element.id) {
-                                element.isClicked=true
+        axiosBaseUrl.get(`movie/popular?api_key=9b743af1d4fde1d65af33c40dcccce87&page=${numberOfPage}`)
+            .then((res) => {
+                            clickedMovies=res.data.results;
+                           clickedMovies.map(element => {
+                            {
+                                element.isClicked=false;
+                                
+                                fav.forEach(fav => {
+                                    if (fav.id==element.id) {
+                                        element.isClicked=true
+                                    }
+                                    
+                                });
+        
                             }
+        
+                        })
+                        setMoviesData(clickedMovies);
+                        
+
+            })
+            .catch((err) => console.log(err))
+        //   dispatch(getMoviesPage(numberOfPage))
+        //         clickedMovies = listSearch;
+        //         console.log(numberOfPage);
+        //         console.log(listSearch);
+        //         clickedMovies.map(element => {
+        //             {
+        //                 element.isClicked=false;
+                        
+        //                 fav.forEach(fav => {
+        //                     if (fav.id==element.id) {
+        //                         element.isClicked=true
+        //                     }
                             
-                        });
+        //                 });
 
-                    }
+        //             }
 
-                })
-                setMoviesData(listSearch)
+        //         })
+        //         setMoviesData(listSearch)
     }, [numberOfPage])
 
     function searchMovie(e) {

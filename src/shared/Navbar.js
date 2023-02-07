@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useSelector } from 'react-redux';
@@ -32,13 +30,6 @@ function CollapsibleExample() {
                         {contextLang}</button>
                     </Nav>
                     
-                    <Nav className="me-auto">
-                        <form className='d-flex' role="search"> 
-                            <input className="form-control me-2" type="search" placeholder="Search" />
-                            <button className="btn btn-outline-warning" type="submit">Search</button>
-                        </form>
-
-                    </Nav>
                     <Nav>
                         <Link className='nav-link m-1' to="/login">Login</Link>
                         <Link className='nav-link m-1 me-2' to="/register">

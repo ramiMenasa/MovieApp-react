@@ -31,8 +31,8 @@ function FavoriteMovie() {
 
     return (
         <>
-            {count==0? <div className="d-flex  align-item-center justify-content-center mt-5">
-                
+            {count==0? <div className="container d-flex flex-column  align-item-center justify-content-center mt-5 w-50">
+                <h3 className="text-light">Favorite is empty </h3>
             <img src={require('./image_processing20210905-11050-1tw1y3b.gif')}/>
         </div>:
         <div className='row col-12 d-flex mb-3 justify-content-evenly' >
